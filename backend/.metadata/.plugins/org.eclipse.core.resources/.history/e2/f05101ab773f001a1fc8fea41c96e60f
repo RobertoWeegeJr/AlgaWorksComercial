@@ -1,0 +1,5 @@
+package com.rwj.comercial.repository;
+
+public interface OportunidadeRepository {
+
+}

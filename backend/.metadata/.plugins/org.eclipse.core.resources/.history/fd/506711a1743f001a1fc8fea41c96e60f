@@ -1,0 +1,13 @@
+
+
+CREATE TABLE oportunidade (
+	id BIGINT AUTO_INCREMENT NOT NULL
+
+
+
+
+);
+
+
+
+
