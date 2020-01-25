@@ -1,0 +1,56 @@
+<p-panel header="Nova Oportunidade">
+    <div class="p-grid">
+        <div class="p-col-2">Id</div>
+        <div class="p-col-10">
+            <input pInputText disabled type="text" [(ngModel)]="oportunidade.id"/>
+        </div>
+        <div class="p-col-2">Nome</div>
+        <div class="p-col-10">
+            <input pInputText type="text" [(ngModel)]="oportunidade.nomeProspecto"/>
+        </div>
+        <div class="p-col-2">Descrição</div>
+        <div class="p-col-10">
+            <input pInputText type="text" [(ngModel)]="oportunidade.descricao"/>
+        </div>
+        <div class="p-col-2">Valor</div>
+        <div class="p-col-10">
+            <input pInputText type="text" [(ngModel)]="oportunidade.valor"/>
+        </div>
+        <div class="p-col-10 p-offset-2">
+            <div class="p-grid">
+                <div class="p-col-1">
+                    <button pButton type="submit" label="Salvar" (click)="salvar()"></button>
+                </div>
+                <div class="p-col-1">
+                    <button pButton type="submit" label="Limpar" (click)="limpar()"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</p-panel>
+
+<p-table [value]="oportunidades">
+
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-op>
+        <tr>
+            <th>{{op.nomeProspecto}}</th>
+            <th>{{op.descricao}}</th>
+            <th>{{op.valor}}</th>
+            <th><button pButton icon="pi pi-pencil" (click)="atualizar(op)"></button></th>
+            <th><button pButton icon="pi pi-trash" (click)="deletar(op)"></button></th>
+        </tr>
+    </ng-template>
+
+</p-table>
+
+<p-toast></p-toast>
