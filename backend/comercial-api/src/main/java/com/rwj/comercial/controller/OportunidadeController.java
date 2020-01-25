@@ -2,7 +2,6 @@ package com.rwj.comercial.controller;
 
 import java.util.List;
 import java.util.Optional;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
